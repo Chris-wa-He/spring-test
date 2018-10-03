@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta content="text/html; charset=UTF-8"/>
+<title>Login page</title>
+<link th:href="@{css/bootstrap.min.css}" rel="stylesheet" />
+
+<style type="text/css">
+body {
+	padding-top: 50px;
+}
+
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Spring Security Demo</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a th:href="@{/}">Home page</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="starter-template">
+			<p th:if="${param.logout}" class="bg-warning">Logout
+				successfully!</p>
+			<p th:if="${param.error}" class="bg-danger">Error occurs. Please
+				retry!</p>
+			<h2>Login with username and password</h2>
+			<form name="form" th:action="@{/login}" action="/login" method="post">
+				<div class="form-group">
+					<label for="username">Account</label> 
+					<input type="text"
+						class="form-control" name="username" value=""
+						placeholder="Account"/>
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label> 
+					<input type="password"
+						class="form-control" name="password" placeholder="Password"/>
+				</div>
+				<input type="submit" id="login" value="Login" class="btn btn-primary" />
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

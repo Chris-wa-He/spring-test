@@ -1,0 +1,8 @@
+insert into sys_user (ID, PASSWORD, USERNAME) values (1, 'admin', 'admin');
+insert into sys_user (ID, PASSWORD, USERNAME) values (2, '123', 'test1');
+
+insert into sys_role (ID, NAME) values (1, 'ROLE_ADMIN');
+insert into sys_role (ID, NAME) values (2, 'ROLE_USER');
+
+insert into sys_user_roles (SYS_USER_ID, ROLES_ID) values (1, 1);
+insert into sys_user_roles (SYS_USER_ID, ROLES_ID) values (2, 2);

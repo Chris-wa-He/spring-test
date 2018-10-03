@@ -1,0 +1,7 @@
+CREATE TABLE PERSON_BATCH 
+   (	"ID" NUMBER(19,0) NOT NULL primary key, 
+	"AGE" NUMBER(10,0), 
+	"NAME" VARCHAR2(20),
+	nation VARCHAR2(20),
+	address VARCHAR2(20)
+   );

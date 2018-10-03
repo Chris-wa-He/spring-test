@@ -1,0 +1,6 @@
+insert into person (id,name,age,address) values (hibernate_sequence.nextval,'Chris',18,'广州');
+insert into person (id,name,age,address) values (hibernate_sequence.nextval,'Iron Man',36,'美国');
+insert into person (id,name,age,address) values (hibernate_sequence.nextval,'Captain American',98,'America');
+insert into person (id,name,age,address) values (hibernate_sequence.nextval,'Spider Man',20,'America');
+insert into person (id,name,age,address) values (hibernate_sequence.nextval,'Dr. Strange',40,'America');
+insert into person (id,name,age,address) values (hibernate_sequence.nextval,'Thor',400,'Asgard');
