@@ -1,5 +1,6 @@
 package com.chris.redis.controller;
 
+import com.chris.redis.service.TimeSequenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,9 @@ public class RedisController {
 
 	@Autowired
 	private PersonDao personDao;
+
+	@Autowired
+	private TimeSequenceService timeSequenceService;
 
 	@RequestMapping("/set")
 	public void set() {
@@ -28,6 +32,20 @@ public class RedisController {
 	@RequestMapping("/getPerson")
 	public Person getPerson() {
 		return personDao.getPerson();
+	}
+
+	@RequestMapping("/setBatchObj")
+	public String setBatchObj(Integer volume) {
+
+		timeSequenceService.insertObject(volume);
+		return "OK";
+	}
+
+	@RequestMapping("/setBatchStr")
+	public String setBatchStr(Integer volume) {
+
+		timeSequenceService.insertStr(volume);
+		return "OK";
 	}
 
 }
